@@ -1,0 +1,316 @@
+/* Import Google Font for a professional look */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0e1f2f, #1a365d);
+  color: #e0e6ed;
+  line-height: 1.6;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  margin-bottom: 40px;
+  color: #e0e6ed;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.security-icon {
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.animate-title {
+  display: inline-block;
+  animation: slideFadeIn 1.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e57373;
+  color: #0e1f2f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #ef5350;
+  transform: scale(1.03);
+}
+
+/* Authentication Container */
+.auth-container {
+  max-width: 400px;
+  margin: 30px auto;
+  background: #243447;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #e0e6ed;
+}
+
+/* Authentication Form */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-container input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #3c566e;
+  background: #2b3a4a;
+  color: #e0e6ed;
+  font-size: 1rem;
+}
+
+.auth-container input::placeholder {
+  color: #8fa5bd;
+}
+
+.auth-container button {
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4eb2e4;
+  color: #0e1f2f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-container button:hover {
+  background-color: #3ca0d1;
+  transform: scale(1.02);
+}
+
+/* Toggle button for switching between login and register */
+.toggle-auth {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #8fa5bd;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+
+
+/* Error message styling */
+.error {
+  color: #ff6b6b;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Form (Dashboard) styling for credentials */
+form:not(.auth-container form) {
+  background: #243447;
+  padding: 35px 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  margin: 0 auto 40px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:not(.auth-container form):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+form:not(.auth-container form) input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #3c566e;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #2b3a4a;
+  color: #e0e6ed;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:not(.auth-container form) input::placeholder {
+  color: #8fa5bd;
+}
+
+form:not(.auth-container form) input:focus {
+  border-color: #4eb2e4;
+  outline: none;
+  box-shadow: 0 0 8px rgba(78, 178, 228, 0.6);
+}
+
+form:not(.auth-container form) button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4eb2e4;
+  color: #0e1f2f;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 12px;
+}
+
+form:not(.auth-container form) button:hover {
+  background-color: #3ca0d1;
+  transform: scale(1.02);
+}
+
+/* Credentials Cards */
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.credentials .card {
+  background: linear-gradient(145deg, #253346, #1a2b3a);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.credentials .card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: rotate(20deg);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+
+.credentials .card:hover::before {
+  opacity: 1;
+}
+
+.credentials .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  color: #4eb2e4;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.card p {
+  margin: 8px 0;
+  color: #cfd8e3;
+  font-size: 1rem;
+}
+
+/* Card Action Buttons */
+.card-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.edit-btn, .delete-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffab40;
+  color: #0e1f2f;
+}
+
+.edit-btn:hover {
+  background-color: #ff9f00;
+}
+
+.delete-btn {
+  background-color: #e57373;
+  color: #0e1f2f;
+}
+
+.delete-btn:hover {
+  background-color: #ef5350;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  form input, form button {
+    font-size: 0.95rem;
+  }
+}
