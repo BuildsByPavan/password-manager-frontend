@@ -3,7 +3,7 @@ import Header from './Header';
 import CredentialForm from './CredentialForm';
 import CredentialCard from './CredentialCard';
 
-const MainApp = ({ token, onLogout }) => {
+const MainApp = ({ token  }) => {
   const [credentials, setCredentials] = useState([]);
   const [formData, setFormData] = useState({ title: '', username: '', password: '', notes: '' });
   const [editingId, setEditingId] = useState(null);
@@ -93,7 +93,6 @@ const MainApp = ({ token, onLogout }) => {
     <div>
       {loading && <p>Loading...</p>}
       {error && <p className="error">{error}</p>}
-      <Header onLogout={onLogout} />
       <CredentialForm
         formData={formData}
         onChange={handleChange}

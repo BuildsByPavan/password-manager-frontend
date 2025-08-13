@@ -6,7 +6,7 @@ const CredentialForm = ({ formData, onChange, onSubmit, editingId, onCancel, loa
       <input
         type="text"
         name="title"
-        placeholder="Title"
+        placeholder="Enter URL"
         value={formData.title}
         onChange={onChange}
         required
